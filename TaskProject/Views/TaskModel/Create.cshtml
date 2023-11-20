@@ -1,0 +1,32 @@
+﻿@model TaskModel
+
+<div class="row text">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h1>Add a new Task</h1>
+        </p>
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <form asp-controller="TaskModel" asp-action="Create" method="post">
+                    <div class="text-danger"></div>
+                
+                <div class="form-group">
+                    <label asp-for="TaskModelName" class="control-label"></label>
+                        <input asp-for="TaskModelName" class="form-control" />
+                        <span asp-validation-for="TaskModelName" class="text-danger"></span>
+                </div>
+                    <div class="form-group">
+                        <label asp-for="TaskModelDescription" class="control-label"></label>
+                        <input asp-for="TaskModelDescription" class="form-control" />
+                        <span asp-validation-for="TaskModelDescription" class="text-danger"></span>
+                    </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-outline-success float-right" />
+                    <a class="btn btn-outline-secondary" asp-action="Index">Show All</a>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
